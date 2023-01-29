@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Header Stuff */
+
+h1 {
+  margin-left: 25rem;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  margin-right: 25rem;
+  display: flex;
+  gap: 5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px#444;
+  background-color: white;
+}
+
+nav button,
+nav button:visited {
+  background-color: white;
+  border: none;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+nav button:hover,
+nav button:focus {
+  border-bottom: 2px solid #222;
+  cursor: pointer;
+}
+
+.button-selected {
+  border-bottom: 2px solid #222;
+}
+
+/* Main */
+main {
+  text-align: center;
+}
+
+h2 {
+  background-color: #111;
+  border-radius: 20px;
+  color: white;
+  font-size: 4rem;
+  padding: 2rem;
+  margin: 20rem auto 4rem;
+}
+
+#selected-color {
+  color: darkturquoise;
+}
+
+.randomizer-button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.randomizer-button:hover {
+  background-color: black;
+  color: white;
+}
