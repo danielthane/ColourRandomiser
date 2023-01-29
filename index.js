@@ -17,15 +17,39 @@ const hexArray = [
   "F",
 ];
 
+let hexState = false;
+
+//State selection Using Nav buttons
+document.querySelector(".simple").addEventListener("click", () => {
+  hexState = false;
+  document.querySelector(".simple").classList.add("button-selected");
+  document.querySelector(".hex").classList.remove("button-selected");
+});
+
+document.querySelector(".hex").addEventListener("click", () => {
+  hexState = true;
+  document.querySelector(".hex").classList.add("button-selected");
+  document.querySelector(".simple").classList.remove("button-selected");
+});
+
 document
   .querySelector(".randomizer-button")
   .addEventListener("click", function () {
-    let randomColor = "";
-    for (let i = 0; i < 6; i++) {
-      let randomIndex = Math.floor(Math.random() * 16);
-      randomColor += hexArray[randomIndex];
+    if (hexState) {
+      hexColorGenerator();
+    } else {
+      simpleColorGenerator();
     }
-    randomColor = "#" + randomColor;
-    document.querySelector("body").style.backgroundColor = randomColor;
-    document.querySelector("#selected-color").innerHTML = randomColor;
   });
+
+//Radom Hex generator code
+function hexColorGenerator() {
+  let randomColor = "";
+  for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random() * 16);
+    randomColor += hexArray[randomIndex];
+  }
+  randomColor = "#" + randomColor;
+  document.querySelector("body").style.backgroundColor = randomColor;
+  document.querySelector("#selected-color").innerHTML = randomColor;
+}
