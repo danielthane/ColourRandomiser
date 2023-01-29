@@ -17,6 +17,14 @@ const hexArray = [
   "F",
 ];
 
+const simpleArray = [
+  "red",
+  "green",
+  "yellow",
+  "rgba(144, 27, 65, 0.7)",
+  "#6529DD",
+];
+
 let hexState = false;
 
 //State selection Using Nav buttons
@@ -50,6 +58,12 @@ function hexColorGenerator() {
     randomColor += hexArray[randomIndex];
   }
   randomColor = "#" + randomColor;
+  document.querySelector("body").style.backgroundColor = randomColor;
+  document.querySelector("#selected-color").innerHTML = randomColor;
+}
+
+function simpleColorGenerator() {
+  let randomColor = simpleArray[Math.floor(Math.random() * simpleArray.length)];
   document.querySelector("body").style.backgroundColor = randomColor;
   document.querySelector("#selected-color").innerHTML = randomColor;
 }
