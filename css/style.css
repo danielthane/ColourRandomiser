@@ -59,8 +59,16 @@ h2 {
   color: white;
   font-size: 4rem;
   padding: 2rem;
-  margin: 20rem auto 4rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.container {
+  margin: 20rem auto;
   width: 50%;
+  border: 3px solid green;
+  padding: 10px;
 }
 
 #selected-color {
